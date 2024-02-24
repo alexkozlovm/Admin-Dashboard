@@ -78,11 +78,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing);
+  padding: var(--spacing-3);
   margin: var(--spacing);
-  position: absolute;
-  top: 2%;
+  position: relative;
   left: 12.5%;
+  margin-top: 1%;
+  margin-bottom: -3%;
   border-radius: 20px;
   box-shadow: var(--light-shadow);
 }
@@ -228,7 +229,7 @@ main {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: reapeat(3, 1fr);
-  grid-gap: var(--spacing);
+  grid-gap: var(--spacing-2);
 }
 main h1 {
   margin: var(--spacing);
@@ -241,6 +242,7 @@ main h1 {
   grid-template-rows: repeat(3, 1fr);
   grid-gap: var(--spacing-3);
   margin: var(--spacing-2);
+  
 }
 .post {
   background: var(--quaternary-color);
@@ -272,4 +274,30 @@ main h1 {
 }
 .post a:hover {
   cursor: pointer;
+}
+#stats {
+  height: 68%;
+  width: 90%;
+  margin: var(--spacing);
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  box-shadow: var(--light-shadow);
+  background-color: var(--quaternary-color);
+}
+#stats ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#stats a, #stats a .fa-solid {
+  color: var(--secondary-color);
+}
+#stats img {
+  width: 100%;
+}
+#stats a .fa-solid:hover, #stats a:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+li {
+  list-style: none;
 }
