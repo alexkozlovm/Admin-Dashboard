@@ -18,6 +18,7 @@
   --transition: all 0.2s linear;
   --spacing: 0.25rem;
   --spacing-2: 0.5rem;
+  --spacing-3: 1.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -99,7 +100,6 @@ header {
 #icons i {
   margin: 0 10px;
   font-size: 1.5rem;
-  
 }
 .ui-switch {
   /* switch */
@@ -109,7 +109,7 @@ header {
   margin: var(--spacing);
   /* circle */
   --circle-diameter: 32px;
-  --circle-bg: var(--accent-color-dark);
+  --circle-bg: var(--accent-color);
   --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
 }
 
@@ -201,9 +201,10 @@ nav {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   box-shadow: var(--dark-shadow);
-  
 }
-li a, li a .fa-solid, li a h1 {
+li a,
+li a .fa-solid,
+li a h1 {
   padding: 10px 0;
   color: var(--primary-color);
   margin: var(--spacing);
@@ -211,10 +212,64 @@ li a, li a .fa-solid, li a h1 {
   transition: var(--transition);
   cursor: pointer;
 }
-a:hover, a .fa-solid:hover {
+a:hover,
+.fa-solid:hover {
   color: var(--accent-color);
-  cursor: pointer
+  cursor: pointer;
 }
 li a h1 {
-  color: var(--accent-color)
+  color: var(--accent-color);
+}
+
+main {
+  margin-top: 6%;
+  margin-left: 12.5%;
+  width: 87.5%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: reapeat(3, 1fr);
+  grid-gap: var(--spacing);
+}
+main h1 {
+  margin: var(--spacing);
+  color: var(--accent-color-dark);
+  text-align: center;
+}
+#posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: var(--spacing-3);
+  margin: var(--spacing-2);
+}
+.post {
+  background: var(--quaternary-color);
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  box-shadow: var(--light-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.post h2 {
+  color: var(--accent-color);
+  margin: var(--spacing);
+}
+#things {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: var(--spacing);
+  padding: var(--spacing);
+}
+#things i {
+  margin: var(--spacing);
+}
+.post p {
+  color: var(--secondary-color);
+  margin: var(--spacing);
+}
+.post a:hover {
+  cursor: pointer;
 }
