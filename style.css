@@ -8,12 +8,36 @@
 :root {
   --primary-color: #f2f2f2;
   --secondary-color: #333;
+  --nav-color: #333;
+  --nav-text-color: #f2f2f2;
   --secondary-color-light: #666;
   --tertiary-color: #f4f4f4;
   --quaternary-color: #f6f6f6;
   --accent-color: #ef7c34;
   --accent-color-light: #f7a56f;
   --accent-color-dark: #e35d0b;
+  --border-radius: 0.25rem;
+  --transition: all 0.2s linear;
+  --spacing: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 1.5rem;
+  --spacing-4: 3rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+.dark {
+  --primary-color: #333;
+  --secondary-color: #ddd;
+  --nav-color: #555;
+  --nav-text-color: #fff;
+  --secondary-color-light: #d5d5d5;
+  --tertiary-color: #353535;
+  --quaternary-color: #444;
+  --accent-color: #ef7c34;
+  --accent-color-light: #e35d0b;
+  --accent-color-dark: #f7a56f;
   --border-radius: 0.25rem;
   --transition: all 0.2s linear;
   --spacing: 0.25rem;
@@ -213,7 +237,7 @@ header {
 nav {
   position: absolute;
   top: 0;
-  background: var(--secondary-color);
+  background: var(--nav-color);
   width: 10%;
   height: 100%;
   display: flex;
@@ -227,7 +251,7 @@ li a,
 li a .fa-solid,
 li a h1 {
   padding: 10px 0;
-  color: var(--primary-color);
+  color: var(--nav-text-color);
   margin: var(--spacing);
   border-radius: var(--border-radius);
   transition: var(--transition);
