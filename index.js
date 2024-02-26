@@ -1,5 +1,6 @@
-//query selectors
+// General query selectors
 const body = document.querySelector("body");
+const nav = document.querySelector("nav");
 
 // Theme switcher
 const sliderCircle = document.querySelector(".slider .circle ");
@@ -17,11 +18,13 @@ function choseTheme() {
         lightTheme();
     }
 }
+
 function lightTheme() { 
-        slider.checked = false;
-        body.classList.remove("dark");
+    slider.checked = false;
+    body.classList.remove("dark");
 }
+
 function darkTheme() {
-        slider.checked = true;
-        body.classList.add("dark");
+    slider.checked = true;
+    body.classList.add("dark");
 }
